@@ -3,33 +3,38 @@ A primeira etapa é fornecer uma imagem docker contendo o DB do PostGres com tod
 Segunda etapa é entregar uma imagem docker contendo a API desenvolvida em java junto com o seu código fonte
 Os parâmetros de configuração / acesso ao banco de dados (url, nome do banco, usuário e senha) devem ser parametrizados por variáveis de ambiente sem utilizar hardcode.
 O sistema se trata de uma API para gestão de prontuários eletrônicos para uma clínica hospitalar. Os dados serão trafegados em formato JSON
+
+Anotações:
+Usuario é quem efetiva o atendimento
+o tipo de atendimento é apenas consulta OU exame
+caso o plano não seja particular com o hospital, informar nome do plano e número da carteirinha
+
 # Dados a serem inseridos nas tabelas:
-	Paciente {
-		cpf: varchar, primaryKey
-		nome: varchar
-		dtNascimento: date
-		endereco: varchar
-		email: varchar
-		se não for por plano particular:
-			nome_plano_saude: varchar
-			num_carteirinha: int
-	}
-	Atendimento {
-		numAten: int, primaryKey
-		cpfPaciente: int, foreignKey
-		cpfUsuario: int, foreignKey
-		nomePaciente: varchar
-		nomeUsuario: varchar (responsável que efetivou o atendimento)(
-		descrAten: text
-		dataAten: date
-		tipoAten: varchar obs: é tipo consulta OU exame
-		valorAten: float
-	}
-	Usuario {
-		cpfUsuario: varchar, primaryKey
-		login: varchar, unique
-		senha: varchar
-	}
+	CREATE TABLE Paciente (
+		cpf_paciente VARCHAR PRIMARY KEY,
+		nome VARCHAR,
+		dt_nascimento DATE,
+		endereco VARCHAR,
+		email VARCHAR,
+		nome_plano_saude VARCHAR,
+		num_carteirinha INT
+	);
+	CREATE TABLE Usuario (
+		cpf_usuario VARCHAR PRIMARY KEY,
+		login VARCHAR UNIQUE,
+		senha VARCHAR
+	);
+	CREATE TABLE Atendimento (
+		numero_aten INT PRIMARY KEY,
+		cpf_paciente VARCHAR,
+		cpf_usuario VARCHAR,
+		descr_aten TEXT,
+		data_aten DATE,
+		tipo_aten VARCHAR,
+		FOREIGN KEY (cpf_paciente) REFERENCES Paciente(cpf_paciente),
+		FOREIGN KEY (cpf_usuario) REFERENCES Usuario(cpf_usuario),
+		valor_aten FLOAT
+	);
 # Métodos HTTP:
 Paciente:
 ->Salvar paciente (POST)
