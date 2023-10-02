@@ -35,6 +35,20 @@ caso o plano não seja particular com o hospital, informar nome do plano e núme
 		FOREIGN KEY (cpf_usuario) REFERENCES Usuario(cpf_usuario),
 		valor_aten FLOAT
 	);
+	 	
+	INSERT INTO Paciente (cpf_paciente, nome, dt_nascimento, endereco, email, nome_plano_saude, num_carteirinha)
+	VALUES (08931732474, 'julio', '1985-02-28', 'Cruzadas-Feira', 'julio@gmail.com', 'santandersaude', 1082957),
+		   (86519472853, 'marcio', '1998-06-30', 'Centro-Feira', 'marcioamaral@hotmail.com', 'itau saude', 295917);
+	INSERT INTO Paciente (cpf_paciente, nome, dt_nascimento, endereco, email)
+	VALUES (24819568345, 'emilia', '2001-03-31', 'Dobradinho-Calvaras', 'emiliasantos@gmail.com');
+	
+	INSERT INTO Usuario (cpf_usuario, login, senha)
+	VALUES (847628561897, 'emacio@hotmail.com', 'emacio2201'), (826498175823, 'lucasadmin', 'r0s3tt3');
+	
+	INSERT INTO Atendimento (numero_aten, cpf_paciente, cpf_usuario, descr_aten, data_aten, tipo_aten, valor_aten)
+	VALUES (251, 08931732474, 847628561897, 'exame de glicerina', '2023-04-30', 'exame', 349.99), 
+	(252, 24819568345, 826498175823, 'consulta geral', '2023-07-14', 'consulta', 149.99);
+
 # Métodos HTTP:
 Paciente:
 ->Salvar paciente (POST)
