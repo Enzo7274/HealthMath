@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  HealthMathPGSQL:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=pgsqlUser
+      - POSTGRES_PASSWORD=postpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data 
+    
+  pg-admin:
+    image: dpage/pgadmin4
+
+    environment:
+
+      - PGADMIN_DEFAULT_EMAIL=postgresadmin@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=pgpassword
+      - PGADMIN_LISTEN_PORT=5050
+
+    ports:
+
+      - "5050:5050"

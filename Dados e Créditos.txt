@@ -1,0 +1,14 @@
+Integrantes da Equipe:
+Enzo da Silva dos Anjos
+João Matheus
+
+porta do pgadmin: 5050
+porta do postgreSQL: 5432
+
+login pgadmin:
+postgresadmin@gmail.com
+pgpassword
+
+cadastro do postgreSQL para acessar a DB:
+pgsqlUser
+psotpassword
