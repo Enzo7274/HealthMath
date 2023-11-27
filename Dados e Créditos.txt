@@ -5,10 +5,24 @@ João Matheus
 porta do pgadmin: 5050
 porta do postgreSQL: 5432
 
+Host name HealthMath: HealthMathPGSQL
+
 login pgadmin:
 postgresadmin@gmail.com
 pgpassword
 
 cadastro do postgreSQL para acessar a DB:
 pgsqlUser
-psotpassword
+postpassword
+
+como instalar:
+(path) = diretório onde está o arquivo .yml
+docker-compose -f (path) up -d
+
+porta para acessar pgAdmin:
+localhost:5050/
+
+se der pau:
+docker-compose -f (path) down
+
+ps: se no pgadmin der "connection is bad" provável que ele não achou a database ou digitou os nomes do host ou da database errado
