@@ -22,7 +22,7 @@ import br.healthmath.backend.javawebapplication.controller.PacienteBC;
  */
 @WebFilter(filterName = "PacientesFilter", urlPatterns = {"/pacientes.jsp"})
 public class PacientesFilter implements Filter {
-    
+    private PacienteBC bc = new PacienteBC();
     private static final boolean debug = true;
 
     // The filter configuration object we are associated with.  If
@@ -107,6 +107,7 @@ public class PacientesFilter implements Filter {
         
         Throwable problem = null;
         try {
+            request.setAttribute("pacientes", bc.obterPacientes());
             chain.doFilter(request, response);
         } catch (Throwable t) {
             // If an exception is thrown somewhere down the filter chain,

@@ -1,5 +1,6 @@
 br\healthmath\backend\javawebapplication\model\Atendimento.class
 br\healthmath\backend\javawebapplication\resources\JakartaEE10Resource.class
+br\healthmath\backend\javawebapplication\servlets\filters\PacientesFilter.class
 br\healthmath\backend\javawebapplication\dao\PacienteDAO.class
 br\healthmath\backend\javawebapplication\model\Paciente.class
 br\healthmath\backend\javawebapplication\JakartaRestConfiguration.class
