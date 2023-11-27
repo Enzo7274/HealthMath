@@ -14,15 +14,19 @@
     </head>
     <body>
         <c:if test="${pacientes.size()==0}">   
-            <h1>Não existem contatos para serem exibidos</h1>
+            <h1>Não existem pacientes para serem exibidos</h1>
         </c:if>
-        <c:if test="${contatos.size() > 0}">
+        <c:if test="${pacientes.size() > 0}">
             <CENTER><h1><b>Lista de Pacientes</b></h1></CENTER>
             <table>
-                <thead><td>Nome</td><td>E-mail</td><td>Telefone</td></thead>
-                <c:forEach items="${contatos}" var="contato">
+                <thead><td>cpf</td><td>nome</td><td>nascimento</td><td>endereco</td><td>email</td><td>plano-de-saude</td><td>carteirinha</td></thead>
+                <c:forEach items="${pacientes}" var="pacientes">
                     <tr>
-                        <td>${contato.nome}</td><td>${contato.email}</td><td>${contato.telefone}</td>
+                        <td>${paciente.cpf_paciente}</td><td>${paciente.nome}</td><td>${paciente.dt_nascimento}</td>
+                        <td>${paciente.endereco}</td>
+                        <td>${paciente.email}</td>
+                        <td>${paciente.nome_plano_saude}</td>
+                        <td>${paciente.num_carteirinha}</td>
                     </tr>
                 </c:forEach>
             </table>
