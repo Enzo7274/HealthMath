@@ -1,0 +1,3 @@
+br\unifan\hellowsdl\services\HelloService.class
+br\unifan\hellowsdl\JakartaRestConfiguration.class
+br\unifan\hellowsdl\resources\JakartaEE10Resource.class
