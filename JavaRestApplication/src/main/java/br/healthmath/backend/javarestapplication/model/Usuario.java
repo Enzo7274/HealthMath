@@ -18,6 +18,18 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public void setCpf_usuario(String cpf_usuario) {
+        this.cpf_usuario = cpf_usuario;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public String getCpf_usuario() {
         return cpf_usuario;
     }
