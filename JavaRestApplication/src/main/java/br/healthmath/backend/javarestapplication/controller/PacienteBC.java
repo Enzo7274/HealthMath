@@ -13,9 +13,16 @@ import java.util.List;
  */
 public class PacienteBC {
     private final PacienteDAO dao = new PacienteDAO();
-
+    /*
     public void salvar(Paciente paciente) {
         this.dao.salvar(paciente);
+    }
+*/
+    public boolean salvar(Paciente paciente){
+        if(!this.dao.obterPacientesPorCpf(paciente.getCpf_paciente()).isEmpty())
+            return false;
+        this.dao.salvar(paciente);
+        return true;
     }
 
     public ArrayList<Paciente> obterPacientes() {
