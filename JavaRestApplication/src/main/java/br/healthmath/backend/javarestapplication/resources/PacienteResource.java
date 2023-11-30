@@ -6,6 +6,7 @@ package br.healthmath.backend.javarestapplication.resources;
 
 import br.healthmath.backend.javarestapplication.controller.PacienteBC;
 import br.healthmath.backend.javarestapplication.model.Paciente;
+import br.healthmath.backend.javarestapplication.security.Autorizar;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;

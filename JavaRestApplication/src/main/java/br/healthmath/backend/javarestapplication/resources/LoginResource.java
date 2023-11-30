@@ -24,6 +24,7 @@ import java.time.ZoneId;
 import java.util.Date;
 
 import br.healthmath.backend.javarestapplication.model.Usuario;
+import io.jsonwebtoken.security.InvalidKeyException;
 
 @Path("/login")
 public class LoginResource {

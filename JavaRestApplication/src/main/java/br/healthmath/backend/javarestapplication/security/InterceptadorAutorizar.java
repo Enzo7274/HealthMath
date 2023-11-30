@@ -23,7 +23,6 @@ import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.Provider;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.security.SignatureException;
 import javax.crypto.SecretKey;
 
 @Provider
