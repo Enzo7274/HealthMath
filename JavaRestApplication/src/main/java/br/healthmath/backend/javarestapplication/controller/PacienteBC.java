@@ -5,7 +5,6 @@
 package br.healthmath.backend.javarestapplication.controller;
 import br.healthmath.backend.javarestapplication.model.Paciente;
 import br.healthmath.backend.javarestapplication.dao.PacienteDAO;
-import java.util.ArrayList;
 import java.util.List;
 /**
  *
@@ -25,7 +24,7 @@ public class PacienteBC {
         return true;
     }
 
-    public ArrayList<Paciente> obterPacientes() {
+    public List<Paciente> obterPacientes() {
         return this.dao.obterPacientes();
     }
 

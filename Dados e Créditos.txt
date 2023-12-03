@@ -26,3 +26,7 @@ se der pau:
 docker-compose -f (path) down
 
 ps: se no pgadmin der "connection is bad" provável que ele não achou a database ou digitou os nomes do host ou da database errado
+
+Caso tenha erro de porta no wildfly, vá para a pasta de projetos de netbeans, acesse a pasta do wildfly para depois o configuration e abra o standalone-full.xml e procure por uma tag HTTP seguida de uma porta 8080 para mudar para alguma outra disponível
+Outra forma também de resolver isso, apesar de temporário, é você buscar pelo processo na qual está utilizando a porta 8080 pelo comando ' lsof -i :8080 ' e a partir disso você usa o comando ' kill -9 (PID do processo que vc achou) ' o processo em questão geralmente vem com nome java porque é o servidor que você está compilando no netbeans no momento
+OBS: os comandos mencionados são baseados num S.O. Linux baseado em Ubuntu

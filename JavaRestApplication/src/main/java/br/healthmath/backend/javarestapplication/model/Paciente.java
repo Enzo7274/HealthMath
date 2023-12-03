@@ -22,6 +22,38 @@ public class Paciente {
         this.num_carteirinha = num_carteirinha;
     }
 
+    public Paciente() {
+    }
+
+    
+    public void setCpf_paciente(String cpf_paciente) {
+        this.cpf_paciente = cpf_paciente;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDt_nascimento(String dt_nascimento) {
+        this.dt_nascimento = dt_nascimento;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNome_plano_saude(String nome_plano_saude) {
+        this.nome_plano_saude = nome_plano_saude;
+    }
+
+    public void setNum_carteirinha(int num_carteirinha) {
+        this.num_carteirinha = num_carteirinha;
+    }
+
     public String getCpf_paciente() {
         return cpf_paciente;
     }

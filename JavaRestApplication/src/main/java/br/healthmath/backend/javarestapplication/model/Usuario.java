@@ -12,12 +12,15 @@ public class Usuario {
     
     public String cpf_usuario, login, senha;
 
-    public Usuario(String cpf_usuario, String login, String senha) {
-        this.cpf_usuario = cpf_usuario;
-        this.login = login;
-        this.senha = senha;
-    }
+        public Usuario(String cpf_usuario, String login, String senha) {
+            this.cpf_usuario = cpf_usuario;
+            this.login = login;
+            this.senha = senha;
+        }
 
+        public Usuario(){
+        }
+    
     public void setCpf_usuario(String cpf_usuario) {
         this.cpf_usuario = cpf_usuario;
     }
