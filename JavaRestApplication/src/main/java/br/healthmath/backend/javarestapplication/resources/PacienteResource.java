@@ -22,7 +22,7 @@ import java.util.List;
  *
  * @author enzo7274
  */
-@Path("/")
+@Path("/paciente")
 public class PacienteResource {
     private final PacienteBC bc = new PacienteBC();
     

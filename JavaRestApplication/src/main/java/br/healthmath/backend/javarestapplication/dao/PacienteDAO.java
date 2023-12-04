@@ -89,7 +89,7 @@ public class PacienteDAO {
         return this.obterPacientes("SELECT * FROM paciente", null);
     }
     
-    public List<Paciente> obterPacientesPorCpf(String cpf) {
-        return this.obterPacientes("SELECT * FROM pacientes where cpf_paciente=?", cpf);
+    public List<Paciente> obterPacientesPorCpf(String cpf_paciente) {
+        return this.obterPacientes("SELECT * FROM pacientes where cpf_paciente=?", cpf_paciente);
     }
 }
