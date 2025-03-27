@@ -1,5 +1,5 @@
 # HealthMath
-A primeira etapa é fornecer uma imagem docker contendo o DB do PostGres com todas as tableas criadas já com dados de exemplo inseridos
+A primeira etapa é fornecer uma imagem docker contendo o DB do PostGres com todas as tabelas criadas já com dados de exemplo inseridos
 Segunda etapa é entregar uma imagem docker contendo a API desenvolvida em java junto com o seu código fonte
 Os parâmetros de configuração / acesso ao banco de dados (url, nome do banco, usuário e senha) devem ser parametrizados por variáveis de ambiente sem utilizar hardcode.
 O sistema se trata de uma API para gestão de prontuários eletrônicos para uma clínica hospitalar. Os dados serão trafegados em formato JSON
